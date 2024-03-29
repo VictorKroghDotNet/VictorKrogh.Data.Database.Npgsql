@@ -9,7 +9,7 @@ public interface INpsqlClientDbProvider : IDbProvider
 {
 }
 
-internal class NpgsqlClientDbProviderBase(IsolationLevel isolationLevel, NpgsqlClientProviderSettings npsqlClientProviderSettings) : DbProviderBase(isolationLevel), INpsqlClientDbProvider
+public abstract class NpgsqlClientDbProviderBase(IsolationLevel isolationLevel, NpgsqlClientProviderSettings npsqlClientProviderSettings) : DbProviderBase(isolationLevel), INpsqlClientDbProvider
 {
     protected NpgsqlClientProviderSettings ProviderSettings { get; } = npsqlClientProviderSettings;
 
